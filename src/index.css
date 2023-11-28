@@ -1,0 +1,24 @@
+:root {
+  --dark-blue: #10141e;
+  --greyish-blue: #5a698f;
+  --pure-white: #ffffff;
+  --red: #fc4747;
+  --semi-dark-blue: #161d2f;
+  --black: #000000;
+  --font: "Outfit", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--dark-blue);
+  height: 100dvh;
+  width: 100%;
+  font-family: var(--font);
+  font-weight: 300;
+  color: var(--pure-white);
+}
