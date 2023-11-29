@@ -29,6 +29,7 @@
     &:focus {
       outline: none;
       border-bottom: 0.8px solid var(--pure-white);
+      caret-color: var(--red);
     }
   }
 }
