@@ -1,0 +1,78 @@
+.trending-card {
+  color: var(--pure-white);
+  background-size: cover;
+  width: 240px;
+  height: 140px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+
+  .bookmark {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    span {
+      background-color: hsla(0, 0%, 0%, 0.267);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 10px;
+        height: 10px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .info {
+    width: 100%;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 3px;
+      span {
+        opacity: 0.75;
+        font-weight: 300;
+        font-size: 12px;
+      }
+      .category {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+    .title {
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+
+  .play {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    box-sizing: border-box;
+    gap: 15px;
+    background-color: hsla(0, 0%, 100%, 0.253);
+    border-radius: 25px;
+    padding: 8px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+    transition: all 0.25s ease;
+    .play {
+      display: flex;
+      margin: auto;
+    }
+  }
+}
