@@ -23,9 +23,15 @@ function Sidebar() {
         <NavLink to="/">
           <img src={homeIcon} alt="Home" />
         </NavLink>
-        <img src={movieIcon} alt="Movies" />
-        <img src={seriesIcon} alt="TV Series" />
-        <img src={bookmarkIcon} alt="Bookmarks" />
+        <NavLink to="/movies">
+          <img src={movieIcon} alt="Movies" />
+        </NavLink>
+        <NavLink to="/series">
+          <img src={seriesIcon} alt="TV Series" />
+        </NavLink>
+        <NavLink to="/bookmarked">
+          <img src={bookmarkIcon} alt="Bookmarks" />
+        </NavLink>
       </div>
       <div className={classes.avatar}>
         <img src={avatar} alt="User avatar" />

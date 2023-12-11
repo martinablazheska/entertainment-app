@@ -1,0 +1,19 @@
+.recommended {
+  width: 100%;
+  .recommended-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 400px) {
+  .recommended {
+    .recommended-content {
+      justify-content: space-between;
+    }
+  }
+}

@@ -3,3 +3,16 @@
   padding: 60px 16px 0 16px;
   box-sizing: border-box;
 }
+h1 {
+  font-weight: 300;
+  font-size: 28px;
+  letter-spacing: -0.312px;
+  margin: 40px 0 15px 0;
+}
+
+@media (min-width: 800px) {
+  .home {
+    width: calc(95% - 100px);
+    margin-left: 150px;
+  }
+}
