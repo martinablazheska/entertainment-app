@@ -4,7 +4,7 @@ import { filterBookmarks } from "../../store/bookmarked-slice";
 import SearchBar from "../UI/SearchBar";
 import RecommendedCard from "../UI/RecommendedCard";
 
-import classes from "./bookmarked.module.scss";
+import classes from "./Bookmarked.module.scss";
 
 function Bookmarked() {
   const dispatch = useAppDispatch();
