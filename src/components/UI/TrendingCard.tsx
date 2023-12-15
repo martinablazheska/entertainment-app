@@ -1,3 +1,6 @@
+import { useAppDispatch, useAppSelector } from "../../store/store";
+import { toggleBookmark } from "../../store/bookmarked-slice";
+
 import bookmarkedIcon from "../../assets/icon-bookmark-full.svg";
 import notBookmarkedIcon from "../../assets/icon-bookmark-empty.svg";
 import movieIcon from "../../assets/icon-category-movie.svg";
@@ -12,18 +15,24 @@ const TrendingCard: React.FC<{
   thumbnail: string | undefined;
   year: number;
   rating: string;
-  bookmarked: boolean;
   category: string;
-}> = ({ title, thumbnail, year, rating, bookmarked, category }) => {
+}> = ({ title, thumbnail, year, rating, category }) => {
+  const dispatch = useAppDispatch();
+  const bookmarks = useAppSelector((state) => state.bookmarks.allBookmarks);
+  const isBookmarked = bookmarks.find((c) => c.title === title);
+  function onBookmarkClick() {
+    dispatch(toggleBookmark(title));
+  }
+
   return (
     <div
       className={classes["trending-card"]}
       style={{ backgroundImage: `url("../.${thumbnail}")` }}
     >
-      <div className={classes.bookmark}>
+      <div className={classes.bookmark} onClick={onBookmarkClick}>
         <span>
           <img
-            src={bookmarked ? bookmarkedIcon : notBookmarkedIcon}
+            src={isBookmarked ? bookmarkedIcon : notBookmarkedIcon}
             alt="bookmark"
           />
         </span>

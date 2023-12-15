@@ -1,14 +1,28 @@
+import { useAppDispatch, useAppSelector } from "../../store/store";
+import { filterMovies } from "../../store/filter-slice";
+
 import SearchBar from "../UI/SearchBar";
 import RecommendedCard from "../UI/RecommendedCard";
-
-import { movies } from "../../store/data";
 
 import classes from "./Movies.module.scss";
 
 function Movies() {
+  const dispatch = useAppDispatch();
+
+  const movies = useAppSelector((state) => state.filter.movies.displayed);
+  const value = useAppSelector((state) => state.filter.movies.searchValue);
+
+  function onMovieSearch(input: string) {
+    dispatch(filterMovies(input));
+  }
+
   return (
     <div className={classes.movies}>
-      <SearchBar placeholder="Search for movies" />
+      <SearchBar
+        placeholder="Search for movies"
+        value={value}
+        onSearch={onMovieSearch}
+      />
       <h1>Movies</h1>
       <div className={classes["movies-content"]}>
         {movies.map((r) => (
@@ -18,7 +32,6 @@ function Movies() {
             year={r.year}
             key={r.title}
             rating={r.rating}
-            bookmarked={r.isBookmarked}
             category={r.category}
           />
         ))}

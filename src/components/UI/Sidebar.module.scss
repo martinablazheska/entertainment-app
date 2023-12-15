@@ -49,6 +49,9 @@
       border-radius: 50%;
       border: 2px solid var(--pure-white);
     }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
