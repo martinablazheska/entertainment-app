@@ -32,10 +32,13 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - React Router DOM
+- React Redux
+- React Redux Toolkit
 - Mobile-first workflow
-
-### What I learned
 
 ### Continued development
 
-### Useful resources
+1. Improve navigation style for mobile (the four links should be centered);
+2. Improve the card container style for mobile (show more content on the screen);
+3. Refactor the Recommended, Movies, TVSeries and Bookmarks components into a single reusable component due to similarities in the styles and the structure;
+4. Refactor the filter-slice.ts reducer functions into a single function.
