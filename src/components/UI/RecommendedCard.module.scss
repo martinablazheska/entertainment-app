@@ -1,8 +1,8 @@
 .recommended-card {
   .thumbnail {
     background-size: cover;
-    width: 164px;
-    height: 110px;
+    width: 100%;
+    height: 180px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -87,18 +87,18 @@
   }
 }
 
-@media (min-width: 400px) {
-  .trending-card {
-    width: 220px;
-    height: 140px;
-  }
-}
+// @media (min-width: 400px) {
+//   .trending-card {
+//     width: 220px;
+//     height: 140px;
+//   }
+// }
 
-@media (min-width: 800px) {
-  .recommended-card {
-    .thumbnail {
-      width: 280px;
-      height: 174px;
-    }
-  }
-}
+// @media (min-width: 800px) {
+//   .recommended-card {
+//     .thumbnail {
+//       width: 280px;
+//       height: 174px;
+//     }
+//   }
+// }

@@ -2,18 +2,18 @@
   width: 100%;
   .recommended-content {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 20%));
+    grid-template-rows: repeat(auto, 300px);
+    justify-content: flex-start;
   }
 }
 
 @media (min-width: 400px) {
   .recommended {
     .recommended-content {
-      justify-content: flex-start;
+      justify-content: space-between;
     }
   }
 }
