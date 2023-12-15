@@ -16,21 +16,21 @@ function Sidebar() {
     <div className={classes.sidebar}>
       <div className={classes.links}>
         <div className={classes.logo}>
-          <Link to="/">
+          <Link to="/entertainment-app/">
             <img src={logo} alt="logo" />
           </Link>
         </div>
         <div className={classes.navigation}>
-          <NavLink to="/">
+          <NavLink to="/entertainment-app/">
             <img src={homeIcon} alt="Home" />
           </NavLink>
-          <NavLink to="/movies">
+          <NavLink to="/entertainment-app/movies">
             <img src={movieIcon} alt="Movies" />
           </NavLink>
-          <NavLink to="/series">
+          <NavLink to="/entertainment-app/series">
             <img src={seriesIcon} alt="TV Series" />
           </NavLink>
-          <NavLink to="/bookmarked">
+          <NavLink to="/entertainment-app/bookmarked">
             <img src={bookmarkIcon} alt="Bookmarks" />
           </NavLink>
         </div>

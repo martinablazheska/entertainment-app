@@ -10,13 +10,13 @@ import BookmarkedPage from "./pages/BookmarkedPage";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/entertainment-app",
     element: <RootLayoutPage />,
     children: [
-      { path: "", element: <HomePage /> },
-      { path: "/movies", element: <MoviesPage /> },
-      { path: "/series", element: <TVSeriesPage /> },
-      { path: "/bookmarked", element: <BookmarkedPage /> },
+      { path: "/entertainment-app", element: <HomePage /> },
+      { path: "/entertainment-app/movies", element: <MoviesPage /> },
+      { path: "/entertainment-app/series", element: <TVSeriesPage /> },
+      { path: "/entertainment-app/bookmarked", element: <BookmarkedPage /> },
     ],
   },
 ]);

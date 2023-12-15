@@ -42,3 +42,4 @@ Users should be able to:
 2. Improve the card container style for mobile (show more content on the screen);
 3. Refactor the Recommended, Movies, TVSeries and Bookmarks components into a single reusable component due to similarities in the styles and the structure;
 4. Refactor the filter-slice.ts reducer functions into a single function.
+5. Add error elements for each route

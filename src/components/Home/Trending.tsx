@@ -17,7 +17,6 @@ function Trending() {
               year={t.year}
               key={t.title}
               rating={t.rating}
-              bookmarked={t.isBookmarked}
               category={t.category}
             />
           ))}
