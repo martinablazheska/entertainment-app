@@ -36,8 +36,13 @@ const bookmarkedSlice = createSlice({
         );
       }
     },
+    resetBookmarks: (state) => {
+      state.displayedBookmarks = state.allBookmarks;
+      state.searchValue = "";
+    },
   },
 });
 
 export default bookmarkedSlice;
-export const { toggleBookmark, filterBookmarks } = bookmarkedSlice.actions;
+export const { toggleBookmark, filterBookmarks, resetBookmarks } =
+  bookmarkedSlice.actions;

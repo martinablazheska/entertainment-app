@@ -44,9 +44,14 @@ const filterSlice = createSlice({
         );
       }
     },
+    resetFilters: (state) => {
+      state.content = initialState.content;
+      state.movies = initialState.movies;
+      state.series = initialState.series;
+    },
   },
 });
 
 export default filterSlice;
-export const { filterContent, filterMovies, filterSeries } =
+export const { filterContent, filterMovies, filterSeries, resetFilters } =
   filterSlice.actions;

@@ -16,6 +16,14 @@ function Bookmarked() {
   function onBookmarkSearch(input: string) {
     dispatch(filterBookmarks(input));
   }
+
+  let heading = "Bookmarked";
+  if (value !== "" && bookmarks.length !== 0) {
+    heading = `Found ${bookmarks.length} results for '${value}'`;
+  }
+  if (value !== "" && bookmarks.length === 0) {
+    heading = `No results found for '${value}'`;
+  }
   return (
     <div className={classes.bookmarked}>
       <SearchBar
@@ -23,7 +31,7 @@ function Bookmarked() {
         onSearch={onBookmarkSearch}
         value={value}
       />
-      <h1>Bookmarked</h1>
+      <h1>{heading}</h1>
       <div className={classes["bookmarked-content"]}>
         {bookmarks.map((r) => (
           <RecommendedCard

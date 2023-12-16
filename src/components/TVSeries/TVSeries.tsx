@@ -15,6 +15,15 @@ function TVSeries() {
   function onSeriesSearch(input: string) {
     dispatch(filterSeries(input));
   }
+
+  let heading = "Series";
+  if (value !== "" && series.length !== 0) {
+    heading = `Found ${series.length} results for '${value}'`;
+  }
+  if (value !== "" && series.length === 0) {
+    heading = `No results found for '${value}'`;
+  }
+
   return (
     <div className={classes.series}>
       <SearchBar
@@ -22,7 +31,7 @@ function TVSeries() {
         value={value}
         onSearch={onSeriesSearch}
       />
-      <h1>Series</h1>
+      <h1>{heading}</h1>
       <div className={classes["series-content"]}>
         {series.map((r) => (
           <RecommendedCard

@@ -16,6 +16,14 @@ function Movies() {
     dispatch(filterMovies(input));
   }
 
+  let heading = "Movies";
+  if (value !== "" && movies.length !== 0) {
+    heading = `Found ${movies.length} results for '${value}'`;
+  }
+  if (value !== "" && movies.length === 0) {
+    heading = `No results found for '${value}'`;
+  }
+
   return (
     <div className={classes.movies}>
       <SearchBar
@@ -23,7 +31,7 @@ function Movies() {
         value={value}
         onSearch={onMovieSearch}
       />
-      <h1>Movies</h1>
+      <h1>{heading}</h1>
       <div className={classes["movies-content"]}>
         {movies.map((r) => (
           <RecommendedCard
