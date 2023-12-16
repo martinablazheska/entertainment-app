@@ -28,7 +28,7 @@ const RecommendedCard: React.FC<{
     <div className={classes["recommended-card"]}>
       <div
         className={classes.thumbnail}
-        style={{ backgroundImage: `url("../..${thumbnail}")` }}
+        style={{ backgroundImage: `url(${thumbnail})` }}
       >
         <div className={classes.bookmark} onClick={onBookmarkClick}>
           <span>
