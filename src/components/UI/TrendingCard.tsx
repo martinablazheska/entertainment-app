@@ -27,7 +27,7 @@ const TrendingCard: React.FC<{
   return (
     <div
       className={classes["trending-card"]}
-      style={{ backgroundImage: `url("${thumbnail}")` }}
+      style={{ backgroundImage: `url("../..${thumbnail}")` }}
     >
       <div className={classes.bookmark} onClick={onBookmarkClick}>
         <span>
