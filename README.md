@@ -8,9 +8,7 @@ This is a solution to the [Entertainment web app challenge on Frontend Mentor](h
   - [The challenge](#the-challenge)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 
 ## Overview
 
