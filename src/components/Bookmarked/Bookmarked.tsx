@@ -24,6 +24,10 @@ function Bookmarked() {
   if (value !== "" && bookmarks.length === 0) {
     heading = `No results found for '${value}'`;
   }
+  if (value === "" && bookmarks.length === 0) {
+    heading = "No bookmarks found";
+  }
+
   return (
     <div className={classes.bookmarked}>
       <SearchBar

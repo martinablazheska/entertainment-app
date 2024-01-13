@@ -4,16 +4,25 @@
     width: 100%;
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 23%));
-    grid-template-rows: repeat(auto, 300px);
+    grid-template-columns: repeat(1, 95%);
+    grid-template-rows: repeat(auto, auto);
     justify-content: center;
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 600px) {
   .recommended {
     .recommended-content {
       justify-content: space-between;
+      grid-template-columns: repeat(2, 48%);
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .recommended {
+    .recommended-content {
+      grid-template-columns: repeat(auto-fill, 300px);
     }
   }
 }
